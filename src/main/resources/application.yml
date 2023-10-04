@@ -1,0 +1,16 @@
+server:
+  port: ${MS_PORT:8080}
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /prices/swagger-ui/api-docs
+  swagger-ui:
+    displayRequestDuration: true
+    tagsSorter: alpha
+
+openapi:
+  title: "Prices challenge API"
+  description: "The prices challenge API is an Application Programming Interface designed to allow find prices"
+  version: "1.0.0"
+  serverUrl: ${MS_SWAGGER_HOST:http://localhost}:${MS_SWAGGER_PORT:8080}
