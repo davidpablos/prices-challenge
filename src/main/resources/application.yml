@@ -1,6 +1,19 @@
 server:
   port: ${MS_PORT:8080}
 
+spring:
+  datasource:
+    url: jdbc:h2:mem:pricesdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baselineOnMigrate: true
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
 springdoc:
   api-docs:
     enabled: true
