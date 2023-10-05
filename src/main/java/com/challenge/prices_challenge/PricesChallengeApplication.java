@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {
-	"com.challenge.prices_challenge.application.controller"
+	"com.challenge.prices_challenge.application.bean",
+	"com.challenge.prices_challenge.application.controller",
+	"com.challenge.prices_challenge.application.exception_handler"
 })
 public class PricesChallengeApplication {
 

@@ -5,17 +5,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PriceInfoResponseTest {
+class PriceResponseTest {
 
 	@Test
 	void when_response_is_created_then_data_can_be_retrieved() {
-		PriceInfoResponse response = new PriceInfoResponse(
+		PriceResponse response = new PriceResponse(
 			35455,
 			1,
 			3,
 			FakeClock.dateTime(2),
 			FakeClock.dateTime(4),
-			30.50
+			30.50,
+			"::currency::"
 		);
 
 		assertEquals(35455, response.getProductId());
@@ -24,6 +25,7 @@ class PriceInfoResponseTest {
 		assertEquals(FakeClock.dateTime(2), response.getStartDate());
 		assertEquals(FakeClock.dateTime(4), response.getEndDate());
 		assertEquals(30.50, response.getPrice());
+		assertEquals("::currency::", response.getCurrency());
 	}
 
 }
